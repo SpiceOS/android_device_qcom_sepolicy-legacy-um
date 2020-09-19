@@ -23,7 +23,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
 PRODUCT_PUBLIC_SEPOLICY_DIRS := \
     $(PRODUCT_PUBLIC_SEPOLICY_DIRS) \
     $(SEPOLICY_PATH)/generic/product/public \
-    $(SEPOLICY_PATH)/qva/product/public 
+    $(SEPOLICY_PATH)/qva/product/public
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS := \
     $(PRODUCT_PRIVATE_SEPOLICY_DIRS) \
@@ -70,3 +70,5 @@ ifneq (,$(filter sdm845 sdm710 sdm660 msm8937 msm8953 msm8998, $(TARGET_BOARD_PL
     BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test
     endif
 endif
+
+-include device/spiceos/sepolicy/qcom/sepolicy.mk
